@@ -209,16 +209,16 @@ __Historical Performance API Endpoint__
 - __API Authentication:__ Implemented Token-based API Endpoints. But currently not in Use due to the Django Rest Framework UI implemenation (Implemented in code, but Commented the logics). Will deploy in future. 
 
 
-## ASSIGNEMENT BY
+## ASSIGNED BY
 
-This project is assisgned by the company:
+This project is assigned by the company:
 
 - [FATMUG, Delhi, India](https://www.linkedin.com/company/fatmug-designs/)
 
 
 ## Contact
 
-If you have any questions or suggestions, feel free to contact me by
+If you have any questions or suggestions, feel free to contact me,
 
 Email - rakeshyadhav575@gmail.com
 
