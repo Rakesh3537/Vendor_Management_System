@@ -3,27 +3,27 @@
 
 ## Table of contents
 
-[Project Description]
+[Project Description](https://github.com/Rakesh3537/Vendor_Management_System/blob/main/README.md#project-description)
 
-[Features]
+[Features](https://github.com/Rakesh3537/Vendor_Management_System/blob/main/README.md#features)
 
-[Roadmap]
+[Roadmap](https://github.com/Rakesh3537/Vendor_Management_System/blob/main/README.md#roadmap)
 
-[Tech Stack]
+[Tech Stack](https://github.com/Rakesh3537/Vendor_Management_System/blob/main/README.md#tech-stack)
 
-[Installation]
+[Installation](https://github.com/Rakesh3537/Vendor_Management_System/blob/main/README.md#installation)
 
-[Test Suite Command]
+[Test Suite Command](https://github.com/Rakesh3537/Vendor_Management_System/blob/main/README.md#test-suite-command)
 
-[API References]
+[API References](https://github.com/Rakesh3537/Vendor_Management_System/blob/main/README.md#api-reference)
 
-[Screenshots]
+[Screenshots](https://github.com/Rakesh3537/Vendor_Management_System/blob/main/README.md#screenshots)
 
-[Pending Items]
+[Pending Items](https://github.com/Rakesh3537/Vendor_Management_System/blob/main/README.md#pending-items)
 
-[Author/Company]
+[Author/Company](https://github.com/Rakesh3537/Vendor_Management_System/blob/main/README.md#assignement-by)
 
-[Contact]
+[Contact](https://github.com/Rakesh3537/Vendor_Management_System/blob/main/README.md#contact)
 
 ## Project Description
 
@@ -94,6 +94,7 @@ Users can create, update, and delete vendor profiles, purchase orders, and monit
 
     ```bash
     python manage.py makemigrations
+
     python manage.py migrate
     ```
 
@@ -220,4 +221,5 @@ This project is assisgned by the company:
 If you have any questions or suggestions, feel free to contact me by
 
 Email - rakeshyadhav575@gmail.com
+
 LinkedIn - [Rakesh T](https://www.linkedin.com/in/rakesh-t-1489341b7)
