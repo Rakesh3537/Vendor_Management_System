@@ -1,0 +1,5 @@
+Django==5.0
+djangorestframework==3.14.0
+virtualenv==20.24.7
+virtualenv-clone==0.5.7
+virtualenvwrapper==4.8.4

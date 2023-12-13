@@ -1,0 +1,154 @@
+<!-- vendors.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vendor List</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .container {
+            text-align: center;
+            margin: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #333;
+            color: #fff;
+        }
+
+        a,.update-button {
+            color: #007BFF;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .create-button-container {
+            text-align: right;
+        }
+
+        .create-button {
+            background-color: #f05223;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .note {
+            font-size: 14px;
+            margin-top: 20px;
+            font-style: italic;
+            color: #999; /* Light grey color */
+            text-align: left;
+        }
+
+        .order-tooltip {
+            display: none;
+            position: absolute;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 8px;
+            z-index: 1;
+            top: 100;
+            border-radius: 5px;
+        }
+
+        .update-button:hover .order-tooltip {
+            display: block;
+        }
+
+        .order-links {
+            margin-top: 5px;
+            color: #f05223;
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Vendor List</h1>
+    </header>
+
+    <div class="container">
+        <div class="create-button-container">
+            <form action="{% url 'vendor_list_create_view' %}" method="get">
+                <button type="submit" class="create-button">Create Vendor</button>
+            </form>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Vendor Code</th>
+                    <th>Vendor Name</th>
+                    <th>Order</th>
+                    <th>Performance</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for vendor in vendors %}
+                    <tr>
+                        <td><a href="{% url 'vendor_detail_view' vendor.id %}">{{ vendor.id }}</a></td>
+                        <td>{{ vendor.vendor_code }}</td>
+                        <td>{{ vendor.name }}</td>
+                        <td class="update-button">
+                            <a href="{% url 'purchase_order_list_create_view' %}">Create</a>
+                            Update
+                            <div class="order-tooltip">
+                                <div class="order-links">
+                                    Available Orders:<br>
+                                    {% for order in vendor.purchase_order.all %}
+                                        <a href="{% url 'purchase_order_detail_view' order.id %}">{{ order.id }} - {{ order.po_number }}</a><br>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <a href="{% url 'vendor_performance_view' vendor.id%}">View</a>
+                        </td>
+
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <div class="note">
+            <strong>Note:</strong> Click on IDs to do UPDATE & DELETE vendor operations. Click on Create button to CREATE new vendor.
+        </div>
+    </div>
+
+</body>
+</html>

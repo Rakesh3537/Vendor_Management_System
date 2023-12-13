@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vendor Management System</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .container_main {
+            margin-top: 200px;
+            text-align: center; /* Center the content horizontally */
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 40px 80px; /* Adjust the padding to make the buttons larger */
+            font-size: 24px; /* Adjust the font size */
+            text-align: center;
+            text-decoration: none;
+            background-color: #007BFF;
+            color: #fff;
+            border-radius: 10px; /* Adjust the border radius for rounded corners */
+            cursor: pointer;
+            margin: 0; /* Remove the margin to eliminate space between buttons */
+        }
+
+        .btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Vendor Management System</h1>
+    </header>
+
+    <div class="container_main">
+        <div class="container">
+            <a href="{% url 'admin:index' %}" class="btn">Admin</a>
+            <a href="{% url 'vendor_path' %}" class="btn">Vendors</a>
+        </div>
+    </div>
+
+</body>
+</html>
