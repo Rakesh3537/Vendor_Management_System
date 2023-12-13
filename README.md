@@ -67,7 +67,7 @@ Users can create, update, and delete vendor profiles, purchase orders, and monit
 1. Clone the repository:
 
     ```bash
-    git clone https://github.com/yourusername/vendor-management-system.git
+    git clone https://github.com/Rakesh3537/Vendor_Management_System.git
     ```
 
 2. Navigate to the project directory:
